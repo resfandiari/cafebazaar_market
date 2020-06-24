@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e57f20a-b813-4d61-a733-bc76204ab676" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/android/src/main/java/com/resfandiari/cafebazaar_market/UpdateServiceConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/android/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/resfandiari/cafebazaar_market/CafebazaarMarket.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/resfandiari/cafebazaar_market/CafebazaarMarket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/resfandiari/cafebazaar_market/CafebazaarMarketPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/resfandiari/cafebazaar_market/CafebazaarMarketPlugin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/resfandiari/cafebazaar_market/MethodCallHandlerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/resfandiari/cafebazaar_market/MethodCallHandlerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cafebazaar_market.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/cafebazaar_market.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,18 +56,27 @@
       <option name="project" value="LOCAL" />
       <updated>1592987713046</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add check app version for update">
+      <created>1593006624997</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1593006624997</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix readme content" />
     <MESSAGE value="remove author from pubspec" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove author from pubspec" />
+    <MESSAGE value="add check app version for update" />
+    <option name="LAST_COMMIT_MESSAGE" value="add check app version for update" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="603" y="149" key="CommitChangelistDialog2" timestamp="1592987711950">
-      <screen x="0" y="30" width="1920" height="1050" />
+    <state x="482" y="1134" key="CommitChangelistDialog2" timestamp="1593006622192">
+      <screen x="0" y="1104" width="1536" height="840" />
     </state>
+    <state x="482" y="1134" key="CommitChangelistDialog2/0.1104.1536.840/0.30.1920.1050@0.1104.1536.840" timestamp="1593006622192" />
     <state x="603" y="149" key="CommitChangelistDialog2/0.1104.1536.840/0.30.1920.1050@0.30.1920.1050" timestamp="1592987711950" />
     <state x="184" y="117" key="DiffContextDialog" timestamp="1592987260902">
       <screen x="0" y="30" width="1920" height="1050" />
@@ -91,9 +90,10 @@
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="461" y="197" key="SettingsEditor/0.1104.1536.840/0.30.1920.1050@0.30.1920.1050" timestamp="1592986061552" />
-    <state x="552" y="288" key="Vcs.Push.Dialog.v2" timestamp="1592987714545">
-      <screen x="0" y="30" width="1920" height="1050" />
+    <state x="442" y="1310" key="Vcs.Push.Dialog.v2" timestamp="1593006626483">
+      <screen x="0" y="1104" width="1536" height="840" />
     </state>
+    <state x="442" y="1310" key="Vcs.Push.Dialog.v2/0.1104.1536.840/0.30.1920.1050@0.1104.1536.840" timestamp="1593006626483" />
     <state x="552" y="288" key="Vcs.Push.Dialog.v2/0.1104.1536.840/0.30.1920.1050@0.30.1920.1050" timestamp="1592987714545" />
     <state x="349" y="379" key="com.intellij.ide.util.TipDialog" timestamp="1592995294938">
       <screen x="0" y="30" width="1920" height="1050" />

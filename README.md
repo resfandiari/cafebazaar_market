@@ -35,7 +35,7 @@ CafebazaarMarket.showCafebazzarLogin();
 ### Checking for update (if newer version is available)
 
 ```dart
-bool isUpdateAvailable = await Cafebazaar.isUpdateAvailable();
+bool isUpdateAvailable = await CafebazaarMarket.isUpdateAvailable();
  if(isUpdateAvailable) {
     CafebazaarMarket.goToAppPageOnBazaar();
     //or just show a dialog ask if user wants to update then call CafebazaarMarket.showProgramPage();

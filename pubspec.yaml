@@ -1,6 +1,6 @@
 name: cafebazaar_market
 description: flutter plugin for cafebazaar android market (only works on android)
-version: 0.1.0
+version: 0.1.1
 homepage: https://github.com/resfandiari/cafebazaar_market
 
 environment:
