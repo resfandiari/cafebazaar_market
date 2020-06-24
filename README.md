@@ -21,13 +21,13 @@ CafebazaarMarket.setComment();
 ### Developer page
 
 ```dart
-//launches comment bazaar dialog
+//launches developer page on bazaar
 CafebazaarMarket.showDeveloperPage("your_id");
 ```
 
 ### Cafe Bazaar login page
 
 ```dart
-//launches comment bazaar dialog
+//launches login page bazaar
 CafebazaarMarket.showCafebazzarLogin();
 ```
