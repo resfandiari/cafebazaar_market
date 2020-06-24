@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e57f20a-b813-4d61-a733-bc76204ab676" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +25,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/example" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -40,9 +42,29 @@
       <option name="presentableId" value="Default" />
       <updated>1592982614499</updated>
     </task>
+    <task id="LOCAL-00001" summary="fix readme content">
+      <created>1592987275483</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1592987275483</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fix readme content" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix readme content" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="603" y="149" key="CommitChangelistDialog2" timestamp="1592987634462">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="603" y="149" key="CommitChangelistDialog2/0.1104.1536.840/0.30.1920.1050@0.30.1920.1050" timestamp="1592987634462" />
+    <state x="184" y="117" key="DiffContextDialog" timestamp="1592987260902">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="184" y="117" key="DiffContextDialog/0.1104.1536.840/0.30.1920.1050@0.30.1920.1050" timestamp="1592987260902" />
     <state x="740" y="310" key="FileChooserDialogImpl" timestamp="1592984600291">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
@@ -51,5 +73,9 @@
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="461" y="197" key="SettingsEditor/0.1104.1536.840/0.30.1920.1050@0.30.1920.1050" timestamp="1592986061552" />
+    <state x="552" y="288" key="Vcs.Push.Dialog.v2" timestamp="1592987276896">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="552" y="288" key="Vcs.Push.Dialog.v2/0.1104.1536.840/0.30.1920.1050@0.30.1920.1050" timestamp="1592987276896" />
   </component>
 </project>
