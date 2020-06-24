@@ -10,18 +10,18 @@ import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 
 public class MethodCallHandlerImpl implements MethodChannel.MethodCallHandler {
-    //    private final Activity activity;
+    private final Activity activity;
     private final MethodChannel methodChannel;
     private final BinaryMessenger messenger;
     private @Nullable
-    CafebazaarMarket cafebazaar;
+    UpdateServiceConnection updateService;
 
     MethodCallHandlerImpl(
             Activity activity,
             BinaryMessenger messenger
     ) {
-//        this.activity = activity;
-        cafebazaar = new CafebazaarMarket(activity);
+        this.activity = activity;
+        updateService = new UpdateServiceConnection(activity);
 
         this.messenger = messenger;
 
@@ -30,34 +30,43 @@ public class MethodCallHandlerImpl implements MethodChannel.MethodCallHandler {
     }
 
     @Override
-    public void onMethodCall(@NonNull MethodCall call, @NonNull MethodChannel.Result result) {
+    public void onMethodCall(@NonNull MethodCall call, @NonNull final MethodChannel.Result result) {
         switch (call.method) {
             case "referralToProgram": {
-                if (cafebazaar != null)
-                    cafebazaar.referralToProgram();
+                CafebazaarMarket.referralToProgram(this.activity);
                 break;
             }
             case "referralToComment": {
-                if (cafebazaar != null)
-                    cafebazaar.referralToComment();
+                CafebazaarMarket.referralToComment(this.activity);
                 break;
             }
             case "referralToDeveloperPage": {
                 String developerId = call.argument("developerId");
-                if (cafebazaar != null)
-                    cafebazaar.referralToDeveloperPage(developerId);
+                CafebazaarMarket.referralToDeveloperPage(this.activity, developerId);
                 break;
             }
             case "referralToLogin": {
-                if (cafebazaar != null)
-                    cafebazaar.referralToLogin();
+                CafebazaarMarket.referralToLogin(this.activity);
+                break;
+            }
+            case "isUpdateAvailable": {
+                if (updateService != null)
+                    updateService.checkForNewUpdate(
+                            new Runnable() {
+                                @Override
+                                public void run() {
+                                    result.success(true);
+                                }
+                            }, new Runnable() {
+                                @Override
+                                public void run() {
+                                    result.success(false);
+                                }
+                            });
                 break;
             }
             case "dispose": {
-//                if (cafebazzar != null) {
-//                    cafebazzar.dispose();
-//                }
-                result.success(null);
+                tearDown();
                 break;
             }
             default:
@@ -66,7 +75,11 @@ public class MethodCallHandlerImpl implements MethodChannel.MethodCallHandler {
         }
     }
 
-    void stopListening() {
+    public void tearDown() {
         methodChannel.setMethodCallHandler(null);
+
+        if (updateService != null)
+            updateService.releaseService();
+
     }
 }

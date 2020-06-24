@@ -6,19 +6,8 @@ import android.net.Uri;
 import android.util.Log;
 
 public class CafebazaarMarket {
-    private final Activity activity;
 
-    public CafebazaarMarket(
-            final Activity activity
-    ) {
-        if (activity == null) {
-            throw new IllegalStateException("No activity available!");
-        }
-
-        this.activity = activity;
-    }
-
-    public void referralToProgram() {
+    static void referralToProgram(Activity activity) {
         try {
             String appPackageName = activity.getApplication().getPackageName();
             String uri = String.format("bazaar://details?id=%s",appPackageName);
@@ -31,7 +20,7 @@ public class CafebazaarMarket {
         }
     }
 
-    public void referralToComment() {
+    static void referralToComment(Activity activity) {
         String bazaarPackageName = "com.farsitel.bazaar";
         String appPackageName = activity.getApplication().getPackageName();
         String uri = String.format("bazaar://details?id=%s",appPackageName);
@@ -47,7 +36,7 @@ public class CafebazaarMarket {
         }
     }
 
-    public void referralToDeveloperPage(String developerId) {
+    static void referralToDeveloperPage(Activity activity,String developerId) {
         try {
             Intent intent = new Intent(Intent.ACTION_VIEW);
             intent.setData(Uri.parse("bazaar://collection?slug=by_author&aid=" + developerId));
@@ -58,7 +47,7 @@ public class CafebazaarMarket {
         }
     }
 
-    public void referralToLogin() {
+    static void referralToLogin(Activity activity) {
         try {
             Intent intent = new Intent(Intent.ACTION_VIEW);
             intent.setData(Uri.parse("bazaar://login"));

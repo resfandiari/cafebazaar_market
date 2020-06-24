@@ -31,3 +31,13 @@ CafebazaarMarket.showDeveloperPage("your_id");
 //launches login page bazaar
 CafebazaarMarket.showCafebazzarLogin();
 ```
+
+### Checking for update (if newer version is available)
+
+```dart
+bool isUpdateAvailable = await Cafebazaar.isUpdateAvailable();
+ if(isUpdateAvailable) {
+    CafebazaarMarket.goToAppPageOnBazaar();
+    //or just show a dialog ask if user wants to update then call CafebazaarMarket.showProgramPage();
+ }
+```
