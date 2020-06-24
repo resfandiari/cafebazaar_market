@@ -28,7 +28,7 @@ CafebazaarMarket.showDeveloperPage("your_id");
 ### Cafe Bazaar login page
 
 ```dart
-//launches login page bazaar
+//launches bazaar login page
 CafebazaarMarket.showCafebazzarLogin();
 ```
 
@@ -38,6 +38,6 @@ CafebazaarMarket.showCafebazzarLogin();
 bool isUpdateAvailable = await CafebazaarMarket.isUpdateAvailable();
  if(isUpdateAvailable) {
     CafebazaarMarket.goToAppPageOnBazaar();
-    //or just show a dialog ask if user wants to update then call CafebazaarMarket.showProgramPage();
+    //or just show a dialog ask if user wants to update then call CafebazaarMarket.goToAppPageOnBazaar();
  }
 ```
