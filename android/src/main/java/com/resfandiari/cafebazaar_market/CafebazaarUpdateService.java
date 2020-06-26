@@ -15,16 +15,18 @@ import com.farsitel.bazaar.IUpdateCheckService;
 
 import java.util.List;
 
+import io.flutter.plugin.common.MethodChannel;
+
 //address class:
 //https://github.com/easazade/cafebazaar/blob/master/android/src/main/java/ir/easazade/cafebazaar/BazzarUpdateChecker.java
 
-public class UpdateServiceConnection implements ServiceConnection {
+public class CafebazaarUpdateService implements ServiceConnection {
     private IUpdateCheckService service;
-    private UpdateServiceConnection connection;
-    private static final String TAG = "UpdateCheck";
+    private CafebazaarUpdateService connection;
+    private static final String TAG = "CafebazaarUpdateService";
     private Activity activity;
 
-    public UpdateServiceConnection(Activity activity) {
+    public CafebazaarUpdateService(Activity activity) {
         if (activity == null) {
             throw new IllegalStateException("No activity available!");
         }
@@ -46,28 +48,28 @@ public class UpdateServiceConnection implements ServiceConnection {
         Log.d(TAG, "onServiceConnected(): Connected");
     }
 
-    void checkForNewUpdate(final Runnable onUpdateAvailable, final Runnable onNoUpdateAvailable) {
+    void checkForNewUpdate(final MethodChannel.Result pendingResult) {
 
         if (service != null) {
-            doCheck(onUpdateAvailable, onNoUpdateAvailable);
+            doCheck(pendingResult);
         } else {
             new Handler(activity.getMainLooper()).postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    doCheck(onUpdateAvailable, onNoUpdateAvailable);
+                    doCheck(pendingResult);
                 }
             }, 1000);
         }
     }
 
-    private void doCheck(Runnable onUpdateAvailable, Runnable onNoUpdateAvailable) {
+    private void doCheck(final MethodChannel.Result pendingResult) {
         try {
             String appPackageName = activity.getApplication().getPackageName();
             long versionCode = service.getVersionCode(appPackageName);
             if (versionCode != -1L) {
-                onUpdateAvailable.run();
+                pendingResult.success(true);
             } else {
-                onNoUpdateAvailable.run();
+                pendingResult.success(false);
             }
         } catch (Exception e) {
             e.printStackTrace();

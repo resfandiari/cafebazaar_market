@@ -1,6 +1,7 @@
 package com.resfandiari.cafebazaar_market;
 
 import android.app.Activity;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -13,6 +14,7 @@ import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
+import io.flutter.plugin.common.PluginRegistry;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
 
 /**
@@ -49,17 +51,21 @@ public class CafebazaarMarketPlugin implements FlutterPlugin, ActivityAware {
             return;
         }
         CafebazaarMarketPlugin plugin = new CafebazaarMarketPlugin();
-        plugin.maybeStartListening(
+        plugin.setup(
                 registrar.activity(),
-                registrar.messenger()
+                registrar.messenger(),
+                registrar, null
+
         );
     }
 
     @Override
     public void onAttachedToActivity(@NonNull ActivityPluginBinding binding) {
-        maybeStartListening(
+        setup(
                 binding.getActivity(),
-                flutterPluginBinding.getBinaryMessenger()
+                flutterPluginBinding.getBinaryMessenger(),
+                null,
+                binding
         );
     }
 
@@ -80,17 +86,29 @@ public class CafebazaarMarketPlugin implements FlutterPlugin, ActivityAware {
     }
 
     @Override
-    public void onDetachedFromActivityForConfigChanges() {
+    public void onDetachedFromActivityForConfigChanges()
+    {
         onDetachedFromActivity();
     }
 
-    private void maybeStartListening(
-            Activity activity,
-            BinaryMessenger messenger
+    private void setup(
+            final Activity activity,
+            final BinaryMessenger messenger,
+            final PluginRegistry.Registrar registrar,
+            final ActivityPluginBinding activityBinding
     ) {
 
         methodCallHandler =
                 new MethodCallHandlerImpl(
                         activity, messenger);
+
+        if (registrar != null) {
+            // V1 embedding setup for activity listeners.
+            registrar.addActivityResultListener(methodCallHandler);
+        } else {
+            // V2 embedding setup for activity listeners.
+            activityBinding.addActivityResultListener(methodCallHandler);
+        }
+
     }
 }

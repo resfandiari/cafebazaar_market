@@ -1,5 +1,7 @@
 import 'dart:async';
+import 'dart:convert';
 
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class CafebazaarMarket {
@@ -37,7 +39,50 @@ class CafebazaarMarket {
     return hasUpdate;
   }
 
-  static Future<Null> dispose() async {
+  //init payment
+  static Future<bool> initPay(
+      {@required String rsaKey, bool debugMode = false}) async {
+    Map<String, dynamic> args = <String, dynamic>{};
+    args.putIfAbsent("rsaKey", () => rsaKey);
+    args.putIfAbsent("debugMode", () => debugMode);
+    bool result = await _channel.invokeMethod("initPay", args);
+    return result;
+  }
+
+  static Future<dynamic> launchPurchaseFlow(
+      {@required String sku,
+      bool consumption = false,
+      String payload = ""}) async {
+    Map<String, dynamic> args = <String, dynamic>{};
+    args.putIfAbsent("productKey", () => sku);
+    args.putIfAbsent("payload", () => payload);
+    args.putIfAbsent("consumption", () => consumption);
+    dynamic result = await _channel.invokeMethod("launchPurchaseFlow", args);
+    return jsonDecode(result);
+  }
+
+  static Future<dynamic> getPurchase({@required String sku}) async {
+    Map<String, dynamic> args = <String, dynamic>{};
+    args.putIfAbsent("sku", () => sku);
+    dynamic result = await _channel.invokeMethod("getPurchase", args);
+    return jsonDecode(result);
+  }
+
+  static Future<dynamic> queryInventoryAsync({@required String sku}) async {
+    Map<String, dynamic> args = <String, dynamic>{};
+    args.putIfAbsent("sku", () => sku);
+    dynamic result = await _channel.invokeMethod("queryInventoryAsync", args);
+    return result;
+  }
+
+  static Future<bool> verifyDeveloperPayload({@required String payload}) async {
+    Map<String, dynamic> args = <String, dynamic>{};
+    String result = await _channel.invokeMethod("verifyDeveloperPayload", args);
+    print(result);
+    return result == payload;
+  }
+
+  static Future<Null> disposePayment() async {
     await _channel.invokeMethod("dispose");
     return null;
   }

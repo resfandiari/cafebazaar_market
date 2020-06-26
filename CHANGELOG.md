@@ -1,3 +1,11 @@
+## 0.9.5
+
+* fix readme content
+
+## 0.9.4
+
+* add CafeBazaar payment
+
 ## 0.1.2
 
 * fix readme content

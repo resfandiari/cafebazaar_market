@@ -12,28 +12,33 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  String _platformVersion = 'Unknown';
+  String _updateAvailable = 'Unknown';
+  String _connectToBazaar = 'Unknown';
 
   @override
   void initState() {
     super.initState();
-    initPlatformState();
+    //for payment
+    initConnectToBazaar();
+    initCheckUpdate();
   }
 
   // Platform messages are asynchronous, so we initialize in an async method.
-  Future<void> initPlatformState() async {
-    String platformVersion;
+  Future<void> initConnectToBazaar() async {
+    String connectToBazaar;
     // Platform messages may fail, so we use a try/catch PlatformException.
     try {
       //check update available
-      bool hasUpdate = await CafebazaarMarket.isUpdateAvailable();
-      if (hasUpdate) {
-        print("has update");
+      bool connect = await CafebazaarMarket.initPay(rsaKey: null);
+      if (connect) {
+        print("connect");
+        connectToBazaar = "Yes";
       } else {
-        print("no update");
+        print("disconnect");
+        connectToBazaar = "No";
       }
     } on PlatformException {
-      platformVersion = 'Failed to get platform version.';
+      connectToBazaar = 'Failed to connect to Bazaar.';
     }
 
     // If the widget was removed from the tree while the asynchronous platform
@@ -42,7 +47,35 @@ class _MyAppState extends State<MyApp> {
     if (!mounted) return;
 
     setState(() {
-      _platformVersion = platformVersion;
+      _connectToBazaar = connectToBazaar;
+    });
+  }
+
+  // Platform messages are asynchronous, so we initialize in an async method.
+  Future<void> initCheckUpdate() async {
+    String pdateAvailable;
+    // Platform messages may fail, so we use a try/catch PlatformException.
+    try {
+      //check update available
+      bool hasUpdate = await CafebazaarMarket.isUpdateAvailable();
+      if (hasUpdate) {
+        print("has update");
+        pdateAvailable = "Yes";
+      } else {
+        print("no update");
+        pdateAvailable = "No";
+      }
+    } on PlatformException {
+      pdateAvailable = 'Failed to get version for checking update';
+    }
+
+    // If the widget was removed from the tree while the asynchronous platform
+    // message was in flight, we want to discard the reply rather than calling
+    // setState to update our non-existent appearance.
+    if (!mounted) return;
+
+    setState(() {
+      _updateAvailable = pdateAvailable;
     });
   }
 
@@ -57,6 +90,11 @@ class _MyAppState extends State<MyApp> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              Text('Connect To Bazaar for payment: $_connectToBazaar\n'),
+              Text('Update Available: $_updateAvailable\n'),
+              SizedBox(
+                height: 10,
+              ),
               FlatButton(
                 child: Text("page app"),
                 color: Colors.black12,
@@ -70,7 +108,7 @@ class _MyAppState extends State<MyApp> {
               ),
               FlatButton(
                 color: Colors.black12,
-                child: Text("comment app"),
+                child: Text("comment to app"),
                 onPressed: () {
                   //add comment for app  on cafe bazaar
                   CafebazaarMarket.setComment();
@@ -92,7 +130,7 @@ class _MyAppState extends State<MyApp> {
               ),
               FlatButton(
                 color: Colors.black12,
-                child: Text("login page"),
+                child: Text("bazaar login page"),
                 onPressed: () {
                   //show cafe bazaar login page
                   CafebazaarMarket.showCafebazzarLogin();
@@ -101,11 +139,51 @@ class _MyAppState extends State<MyApp> {
               SizedBox(
                 height: 10,
               ),
-              Text('Running on: $_platformVersion\n')
+              RaisedButton(
+                  child: Text("PayFirst"),
+                  onPressed: () async {
+                    Map<String, dynamic> result =
+                        await CafebazaarMarket.launchPurchaseFlow(
+                            sku: "PayFirst",
+                            consumption: false,
+                            payload:
+                                "bGoa+V7g/yqDXvKRqq+JTFn4uQZbPiQJo4pf9RzJ");
+                    print("resultresult $result");
+                    CafebazaarMarket.verifyDeveloperPayload(
+                            payload: "bGoa+V7g/yqDXvKRqq+JTFn4uQZbPiQJo4pf9RzJ")
+                        .then((res) {
+                      print(res);
+                    });
+                  }),
+              SizedBox(
+                height: 10,
+              ),
+              RaisedButton(
+                  child: Text("PaySecond"),
+                  onPressed: () async {
+                    Map<String, dynamic> result =
+                        await CafebazaarMarket.launchPurchaseFlow(
+                            sku: "PaySecond",
+                            consumption: true,
+                            payload: "yqDXvKRqq+JTFn4uQZbPiQJo4pf9RzJ");
+                    print("resultresult $result");
+                    CafebazaarMarket.verifyDeveloperPayload(
+                            payload: "yqDXvKRqq+JTFn4uQZbPiQJo4pf9RzJ")
+                        .then((res) {
+                      print(res);
+                    });
+                  }),
             ],
           ),
         ),
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    //use dispose Payment if you use initPay
+    CafebazaarMarket.disposePayment();
+    super.dispose();
   }
 }

@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.util.Log;
 
-public class CafebazaarMarket {
+public class CafebazaarUtils {
 
     static void referralToProgram(Activity activity) {
         try {
