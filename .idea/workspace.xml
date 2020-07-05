@@ -2,31 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e57f20a-b813-4d61-a733-bc76204ab676" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/android/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/src/main/java/com/resfandiari/cafebazaar_market/CafebazaarPaymentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/src/main/java/com/resfandiari/cafebazaar_market/util/Base64.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/src/main/java/com/resfandiari/cafebazaar_market/util/Base64DecoderException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/src/main/java/com/resfandiari/cafebazaar_market/util/IabException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/src/main/java/com/resfandiari/cafebazaar_market/util/IabHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/src/main/java/com/resfandiari/cafebazaar_market/util/IabResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/src/main/java/com/resfandiari/cafebazaar_market/util/Inventory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/src/main/java/com/resfandiari/cafebazaar_market/util/Purchase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/src/main/java/com/resfandiari/cafebazaar_market/util/Security.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/src/main/java/com/resfandiari/cafebazaar_market/util/SkuDetails.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/android/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/resfandiari/cafebazaar_market/CafebazaarMarket.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/resfandiari/cafebazaar_market/CafebazaarUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/resfandiari/cafebazaar_market/CafebazaarMarketPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/resfandiari/cafebazaar_market/CafebazaarMarketPlugin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/resfandiari/cafebazaar_market/MethodCallHandlerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/resfandiari/cafebazaar_market/MethodCallHandlerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/resfandiari/cafebazaar_market/UpdateServiceConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/resfandiari/cafebazaar_market/CafebazaarUpdateService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cafebazaar_market.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/cafebazaar_market.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -101,20 +83,41 @@
       <option name="project" value="LOCAL" />
       <updated>1593007209898</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add Cafebazaar payment">
+      <created>1593194471382</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1593194471382</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="remove author from pubspec" />
     <MESSAGE value="add check app version for update" />
     <MESSAGE value="fix readme content" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix readme content" />
+    <MESSAGE value="add Cafebazaar payment" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Cafebazaar payment" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="482" y="1134" key="CommitChangelistDialog2" timestamp="1593194440879">
+    <state x="482" y="1134" key="CommitChangelistDialog2" timestamp="1593194469674">
       <screen x="0" y="1104" width="1536" height="840" />
     </state>
-    <state x="482" y="1134" key="CommitChangelistDialog2/0.1104.1536.840/0.30.1920.1050@0.1104.1536.840" timestamp="1593194440879" />
+    <state x="482" y="1134" key="CommitChangelistDialog2/0.1104.1536.840/0.30.1920.1050@0.1104.1536.840" timestamp="1593194469674" />
     <state x="603" y="149" key="CommitChangelistDialog2/0.1104.1536.840/0.30.1920.1050@0.30.1920.1050" timestamp="1592987711950" />
     <state x="184" y="117" key="DiffContextDialog" timestamp="1592987260902">
       <screen x="0" y="30" width="1920" height="1050" />
@@ -129,10 +132,10 @@
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="461" y="197" key="SettingsEditor/0.1104.1536.840/0.30.1920.1050@0.30.1920.1050" timestamp="1592986061552" />
-    <state x="442" y="1310" key="Vcs.Push.Dialog.v2" timestamp="1593007211280">
+    <state x="442" y="1310" key="Vcs.Push.Dialog.v2" timestamp="1593194473810">
       <screen x="0" y="1104" width="1536" height="840" />
     </state>
-    <state x="442" y="1310" key="Vcs.Push.Dialog.v2/0.1104.1536.840/0.30.1920.1050@0.1104.1536.840" timestamp="1593007211280" />
+    <state x="442" y="1310" key="Vcs.Push.Dialog.v2/0.1104.1536.840/0.30.1920.1050@0.1104.1536.840" timestamp="1593194473810" />
     <state x="552" y="288" key="Vcs.Push.Dialog.v2/0.1104.1536.840/0.30.1920.1050@0.30.1920.1050" timestamp="1592987714545" />
     <state x="93" y="1203" width="1350" height="648" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1593192544533">
       <screen x="0" y="1104" width="1536" height="840" />

@@ -134,4 +134,5 @@ Result
 ```dart
 bool result = await CafebazaarMarket.verifyDeveloperPayload("your developerPayload");
 ```
-#### For more information about Cofe Bazaar payment go to [Cafe Bazaar payment article ]([https://developers.cafebazaar.ir/fa/docs/iab/](https://developers.cafebazaar.ir/fa/docs/iab/)).
+#### For more information about Cofe Bazaar payment go to [Cafe Bazaar payment article ](https://developers.cafebazaar.ir/fa/docs/iab/).
+#### Special thanks for payment section code from [cafebazaar_flutter](https://pub.dev/packages/cafebazaar_flutter) package.

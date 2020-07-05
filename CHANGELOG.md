@@ -1,3 +1,7 @@
+## 0.9.6
+
+* fix readme content
+
 ## 0.9.5
 
 * fix readme content
