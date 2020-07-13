@@ -29,8 +29,6 @@ public class MethodCallHandlerImpl implements MethodChannel.MethodCallHandler, P
             BinaryMessenger messenger
     ) {
         this.activity = activity;
-        updateService = new CafebazaarUpdateService(activity);
-        cafebazaarPaymentService = new CafebazaarPaymentService(activity);
 
         this.messenger = messenger;
 
@@ -59,9 +57,10 @@ public class MethodCallHandlerImpl implements MethodChannel.MethodCallHandler, P
                 break;
             }
             case "isUpdateAvailable": {
+                updateService = new CafebazaarUpdateService(activity);
+
                 try {
-                    if (updateService != null)
-                        updateService.checkForNewUpdate(result);
+                updateService.checkForNewUpdate(result);
 
                 }catch (Exception e){
                     Log.e(TAG,e.getMessage());
@@ -69,6 +68,8 @@ public class MethodCallHandlerImpl implements MethodChannel.MethodCallHandler, P
                 break;
             }
             case "initPay": {
+                cafebazaarPaymentService = new CafebazaarPaymentService(activity);
+
                 String rsaKey = call.argument("rsaKey");
                 boolean debugMode = call.<Boolean>argument("debugMode");
 

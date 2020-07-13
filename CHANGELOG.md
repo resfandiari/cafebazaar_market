@@ -1,3 +1,7 @@
+## 0.9.7
+
+* fix bug
+
 ## 0.9.6
 
 * fix readme content
