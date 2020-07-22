@@ -22,7 +22,6 @@ import io.flutter.plugin.common.MethodChannel;
 
 public class CafebazaarUpdateService implements ServiceConnection {
     private IUpdateCheckService service;
-    private CafebazaarUpdateService connection;
     private static final String TAG = "CafebazaarUpdateService";
     private Activity activity;
 
@@ -37,8 +36,7 @@ public class CafebazaarUpdateService implements ServiceConnection {
         Intent i = new Intent(
                 "com.farsitel.bazaar.service.UpdateCheckService.BIND");
         i.setPackage("com.farsitel.bazaar");
-        Intent explicitIntent = convertImplicitIntentToExplicitIntent(activity.getPackageManager(), i);
-        activity.bindService(explicitIntent, this, Context.BIND_AUTO_CREATE);
+        activity.bindService(i, this, Context.BIND_AUTO_CREATE);
     }
 
     @Override
@@ -87,20 +85,7 @@ public class CafebazaarUpdateService implements ServiceConnection {
      * This is our function to un-binds this activity from our service.
      */
     public void releaseService() {
-        activity.unbindService(connection);
-        connection = null;
+        activity.unbindService(this);
         Log.d(TAG, "releaseService(): unbound.");
-    }
-
-    private Intent convertImplicitIntentToExplicitIntent(PackageManager pm, Intent implicitIntent) {
-        List<ResolveInfo> resolveInfoList = pm.queryIntentServices(implicitIntent, 0);
-        if (resolveInfoList == null || resolveInfoList.size() != 1) {
-            return null;
-        }
-        ResolveInfo serviceInfo = resolveInfoList.get(0);
-        ComponentName component = new ComponentName(serviceInfo.serviceInfo.packageName, serviceInfo.serviceInfo.name);
-        Intent explicitIntent = new Intent(implicitIntent);
-        explicitIntent.setComponent(component);
-        return explicitIntent;
     }
 }

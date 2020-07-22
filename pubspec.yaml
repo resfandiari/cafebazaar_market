@@ -1,6 +1,6 @@
 name: cafebazaar_market
 description: flutter plugin for cafebazaar android market (only works on android)
-version: 0.9.7
+version: 0.9.8
 homepage: https://github.com/resfandiari/cafebazaar_market
 
 environment:
@@ -28,8 +28,6 @@ flutter:
     platforms:
       android:
         package: com.resfandiari.cafebazaar_market
-        pluginClass: CafebazaarMarketPlugin
-      ios:
         pluginClass: CafebazaarMarketPlugin
 
   # To add assets to your plugin package, add an assets section, like this:
