@@ -1,6 +1,2 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.resfandiari.cafebazaar_market">
-
-    <uses-permission android:name="com.farsitel.bazaar.permission.PAY_THROUGH_BAZAAR"/>
-
-</manifest>
+  package="com.resfandiari.cafebazaar_market"/>

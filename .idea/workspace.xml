@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8e57f20a-b813-4d61-a733-bc76204ab676" name="Default Changelist" comment="fix  bug">
+    <list default="true" id="8e57f20a-b813-4d61-a733-bc76204ab676" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/android/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/resfandiari/cafebazaar_market/CafebazaarUpdateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/resfandiari/cafebazaar_market/CafebazaarUpdateService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/resfandiari/cafebazaar_market/MethodCallHandlerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/resfandiari/cafebazaar_market/MethodCallHandlerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,7 +14,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Nexus_5X_API_26" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="1190c598" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -99,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593975243866</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="fix check update service  bug">
+      <created>1595407978623</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1595407978624</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -120,15 +123,17 @@
     <MESSAGE value="add check app version for update" />
     <MESSAGE value="add Cafebazaar payment" />
     <MESSAGE value="fix readme content" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix readme content" />
+    <MESSAGE value="fix check update service  bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix check update service  bug" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="603" y="68" key="CommitChangelistDialog2" timestamp="1594653401472">
-      <screen x="0" y="30" width="1920" height="1050" />
+    <state x="2402" y="54" key="CommitChangelistDialog2" timestamp="1595407977124">
+      <screen x="1920" y="24" width="1536" height="840" />
     </state>
     <state x="482" y="1134" key="CommitChangelistDialog2/0.1104.1536.840/0.30.1920.1050@0.1104.1536.840" timestamp="1593975242811" />
     <state x="603" y="149" key="CommitChangelistDialog2/0.1104.1536.840/0.30.1920.1050@0.30.1920.1050" timestamp="1592987711950" />
     <state x="603" y="68" key="CommitChangelistDialog2/1920.24.1536.840/0.30.1920.1050@0.30.1920.1050" timestamp="1594653401472" />
+    <state x="2402" y="54" key="CommitChangelistDialog2/1920.24.1536.840/0.30.1920.1050@1920.24.1536.840" timestamp="1595407977124" />
     <state x="184" y="117" key="DiffContextDialog" timestamp="1592987260902">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
@@ -142,11 +147,12 @@
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="461" y="197" key="SettingsEditor/0.1104.1536.840/0.30.1920.1050@0.30.1920.1050" timestamp="1592986061552" />
-    <state x="442" y="1310" key="Vcs.Push.Dialog.v2" timestamp="1593975245476">
-      <screen x="0" y="1104" width="1536" height="840" />
+    <state x="2362" y="230" key="Vcs.Push.Dialog.v2" timestamp="1595407981248">
+      <screen x="1920" y="24" width="1536" height="840" />
     </state>
     <state x="442" y="1310" key="Vcs.Push.Dialog.v2/0.1104.1536.840/0.30.1920.1050@0.1104.1536.840" timestamp="1593975245476" />
     <state x="552" y="288" key="Vcs.Push.Dialog.v2/0.1104.1536.840/0.30.1920.1050@0.30.1920.1050" timestamp="1592987714545" />
+    <state x="2362" y="230" key="Vcs.Push.Dialog.v2/1920.24.1536.840/0.30.1920.1050@1920.24.1536.840" timestamp="1595407981248" />
     <state x="93" y="1203" width="1350" height="648" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1593192544533">
       <screen x="0" y="1104" width="1536" height="840" />
     </state>
